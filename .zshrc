@@ -21,6 +21,8 @@ unalias rsync
 #export CPPLIBS=/home/dave/davesrc/davecppqt/libs
 setopt nohashdirs
 export EDITOR='vim'
+export BROWSER='google-chrome-unstable'
+export DRI_PRIME=1
 
 antigen use oh-my-zsh
 

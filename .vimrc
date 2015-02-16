@@ -1,7 +1,7 @@
 "colorscheme desert
 
 set expandtab
-set smarttab
+"set smarttab
 set nocompatible
 set modeline
 set ttyfast
@@ -29,17 +29,18 @@ set pastetoggle=<F11>
 
 
 syntax on
-syntax match Tab /\t/
-match Error "\t\|\s\+$\|\%>120v.\+"
-hi Tab gui=underline guifg=blue ctermbg=blue
+"map <F2> :syntax match Tab /\t/<CR>
+"match Error "\t\|\s\+$\|\%>120v.\+"
+"hi Tab gui=underline guifg=blue ctermbg=blue
 
 filetype plugin on
 filetype indent on
-set autoindent smartindent
+set autoindent
+set smartindent
 
 set ofu=syntaxcomplete#Complete
 set tags=~/src/snare-agents
-let mysyntaxfile='~/.vim/syntax/override.vim'
+"let mysyntaxfile='~/.vim/syntax/override.vim'
 let &guicursor = &guicursor . ",a:blinkon0"
 
 set list listchars=tab:\|_,trail:.

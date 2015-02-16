@@ -1,0 +1,13 @@
+[user]
+	email = david.burley@intersectalliance.com
+	name = David Burley
+[branch]
+	autosetupmerge = true
+[push]
+	default = tracking
+[merge]
+	stat = true
+[gui]
+	fontui = -family \"DejaVu Sans Mono\" -size -12 -weight normal -slant roman -underline 0 -overstrike 0
+	displayuntracked = false
+	matchtrackingbranch = true

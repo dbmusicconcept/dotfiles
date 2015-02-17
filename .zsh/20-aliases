@@ -1,2 +1,5 @@
+alias diff="diff -u"
 alias ls="ls --color=always"
 alias vi="vim"
+alias rigrep="grep -R -I"
+alias disable-git-prompt='function precmd { GITBRANCH=" (n/a) " }'

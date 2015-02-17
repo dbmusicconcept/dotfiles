@@ -7,13 +7,13 @@ set modeline
 set ttyfast
 
 "set shiftwidth = tabstop = softtabstop
-set ts=2 sts=2 sw=2
+set ts=4 sts=4 sw=4
 set cin
 set number
 set nohls
 
-"set cinoptions=>s,n0,f0,{2,^-2,(0
-"set guioptions=a
+set cinoptions=>s,n4,f0,{0,(0
+set guioptions=a
 set ghr=0
 
 " Spell Checking
@@ -27,20 +27,17 @@ set mouse=a
 set ruler
 set pastetoggle=<F11>
 
-
 syntax on
-"map <F2> :syntax match Tab /\t/<CR>
-"match Error "\t\|\s\+$\|\%>120v.\+"
-"hi Tab gui=underline guifg=blue ctermbg=blue
+syntax match Tab /\t/
+match Error "\t\|\s\+$\|\%>120v.\+"
+hi Tab gui=underline guifg=blue ctermbg=blue
 
 filetype plugin on
 filetype indent on
-set autoindent
-set smartindent
-
+set autoindent smartindent
 set ofu=syntaxcomplete#Complete
-set tags=~/src/snare-agents
-"let mysyntaxfile='~/.vim/syntax/override.vim'
+set tags=~/src/snare-agents/tags
+let mysyntaxfile='~/.vim/syntax/override.vim'
 let &guicursor = &guicursor . ",a:blinkon0"
 
 set list listchars=tab:\|_,trail:.
@@ -64,14 +61,14 @@ map <F6> <Esc>:setlocal invspell<CR>
          \   syntax enable <Bar>
          \ endif <CR>
 
-:map <F8> <Esc>:colorscheme default<CR>
-runtime plugin/Align.vim
-nmap .h :sf %:t:r.hpp<cr>
-nmap ,h :tabf %:t:r.hpp<cr>
-nmap .c :sf %:t:r.cpp<cr>
-nmap ,c :tabf %:t:r.cpp<cr>
+nnoremap <silent> <F8> :TlistToggle<CR>
 
+nmap .h :sf %:t:r.h**<cr>
+nmap ,h :tabf %:t:r.h**<cr>
+nmap .c :sf %:t:r.c**<cr>
+nmap ,c :tabf %:t:r.c**<cr>
 
+autocmd FileType make setlocal noexpandtab
 " From vimrc_example.vim distributed with Vim 7.
 " When editing a file, always jump to the last known cursor position.
 " Don't do it when the position is invalid or when inside an event handler
@@ -84,10 +81,10 @@ autocmd BufReadPost *
 " Taglist: Use the c settings for the rocksoftc filetype
 
 " Maps F7 to the taglist update facility (note that you must save first!).
-nnoremap <silent> <F7> :TlistUpdate<CR>
+"nnoremap <silent> <F7> :TlistUpdate<CR>
 
 " Maps F8 to the toggle for taglist.
-nnoremap <silent> <F8> :TlistToggle<CR>
+"nnoremap <silent> <F8> :TlistToggle<CR>
 
 " Place the taglist window on the RHS.
 let Tlist_Use_Right_Window = 1

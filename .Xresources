@@ -1,4 +1,5 @@
-URxvt*termName:                       rxvt-unicode
+!URxvt*termName:                       rxvt-unicode
+URxvt*termName:                       xterm-256
 ! URxvt*geometry:                       geometry
 ! URxvt*chdir:                          string
 ! URxvt*reverseVideo:                   boolean
@@ -132,3 +133,5 @@ URxvt*secondaryScroll:                false
 ! URxvt*tabbar-bg:                      colour
 ! URxvt*tabbar-fg:                      colour
 ! URxvt*url-launcher:                   string
+ URxvt*keysym.Home: \033[1~
+ URxvt*keysym.End: \033[4~

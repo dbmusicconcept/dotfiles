@@ -1,8 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='/home/dave/.zsh'
 let g:netrw_dirhist_2='scp://dave@10.1.4.171/'
 let g:netrw_dirhist_3='scp://dave@10.1.4.171/src/'
 let g:netrw_dirhist_4='scp://dave@10.1.4.171/src/snare-agents/'
 let g:netrw_dirhist_5='scp://dave@10.1.4.171/src/snare-agents/snareshared/'
 let g:netrw_dirhist_6='scp://dave@10.1.4.171/src/snare-agents/snareshared/snare/'
+let g:netrw_dirhist_7='/home/dave/src/snare-agents/unix/common'
+let g:netrw_dirhist_8='/home/dave/src/davedevsa/unix/Solaris'

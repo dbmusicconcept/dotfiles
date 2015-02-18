@@ -44,12 +44,14 @@ set list listchars=tab:\|_,trail:.
 
 " Zap Trailing Whitespace
 let c_space_errors=1
+
+map <F2> :Gstatus
 map <F3> :%s/\s\+$//e<CR>
 
 " Toggle Search Highlighting
 map <F4> :set hls!<CR>
 
-map <F5> :GitBlame<CR>
+map <F5> :Gblame<CR>
 
 " Toggle Spell Check
 map <F6> <Esc>:setlocal invspell<CR>
@@ -63,10 +65,10 @@ map <F6> <Esc>:setlocal invspell<CR>
 
 nnoremap <silent> <F8> :TlistToggle<CR>
 
-nmap .h :sf %:t:r.h**<cr>
-nmap ,h :tabf %:t:r.h**<cr>
-nmap .c :sf %:t:r.c**<cr>
-nmap ,c :tabf %:t:r.c**<cr>
+nmap .h :sf %:p:r.h**<cr>
+nmap ,h :tabf %:p:r.h**<cr>
+nmap .c :sf %:p:r.c**<cr>
+nmap ,c :tabf %:p:r.c**<cr>
 
 autocmd FileType make setlocal noexpandtab
 " From vimrc_example.vim distributed with Vim 7.

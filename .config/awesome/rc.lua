@@ -13,6 +13,10 @@ local menubar = require("menubar")
 
 local xdg_menu = require("archmenu")
 
+-- {{ Composite manager
+awful.util.spawn_with_shell("xcompmgr -cF &")
+--}
+
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
@@ -74,9 +78,6 @@ local layouts =
 }
 -- }}}
 
--- {{ Composite manager
-awful.util.spawn_with_shell("xcompmgr -cF &")
---}
 
 -- {{{ Wallpaper
 if beautiful.wallpaper then

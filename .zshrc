@@ -46,6 +46,8 @@ export PATH=$HOME/bin:$PATH
 #export QTPATH=/usr/lib/qt4
 #export CPPLIBS=/home/dave/davesrc/davecppqt/libs
 
+setopt nohashdirs
+
 # Centos 7
 # iapenguin
 #
@@ -66,6 +68,7 @@ alias cmake="cmake -DCMAKE_BUILD_TYPE=Debug"
 
 # Un-Aliases
 unalias rm cp mkdir ln cd man mv ack mysql gcc
+
 # Options
 setopt rm_star_silent
 unsetopt cdable_vars

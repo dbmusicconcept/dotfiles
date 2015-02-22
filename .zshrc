@@ -64,6 +64,8 @@ export LANG=en_US.UTF-8
 # Aliases
 alias cmake="cmake -DCMAKE_BUILD_TYPE=Debug"
 
+# Un-Aliases
+unalias rm cp mkdir ln cd man mv ack mysql gcc
 # Options
 setopt rm_star_silent
 unsetopt cdable_vars
